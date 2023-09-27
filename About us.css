@@ -1,0 +1,108 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+#Contact-link:hover {
+    color: green; 
+    background-color: #FFF; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    transition: all 0.3s ease; 
+}
+
+
+#Request-link:hover {
+    color: #00C853; 
+    background-color: #FFF; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    transition: all 0.3s ease; 
+}
+
+
+#About-link:hover {
+    color: #00C853; 
+    background-color: #FFF; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    transition: all 0.3s ease; 
+}
+#dreamer-link:hover {
+    color: #00C853; 
+    background-color: #FFF; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    transition: all 0.3s ease; 
+}

@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: cornsilk;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    margin-left: 10px; /* Adjust margin for smaller screens */
+}
+
+#logo-text {
+    font-family: cursive;
+    font-size: 24px; /* Adjust font size for smaller screens */
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transitions */
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie-details {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Adjusted transition duration */
+}
+
+.movie-card:hover .movie-details {
+    display: block;
+    opacity: 1;
+}
+
+.movie-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.movie-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: scale(1.05); /* Adjusted scale value */
+}
+
+.title-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Adjusted padding for smaller screens */
+}
+
+.search-input {
+    flex-grow: 1; /* Allow the search input to grow and fill available space */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    width: 80px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Updated hover styles for links */
+#Contact-link:hover,
+#Request-link:hover,
+#About-link:hover,
+#dreamer-link:hover {
+    color: #00C853;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .header {
+        padding: 0.5rem;
+    }
+    .movie-card img:hover {
+        transform: scale(1.1); /* Increase image size on hover */
+        transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+    }
+    .logo {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        margin-left: 0; /* Reset margin for smaller screens */
+    }
+
+    #logo-text {
+        font-size: 1.5rem;
+    }
+
+    .movie-container {
+        padding: 1rem; /* Adjusted padding for smaller screens */
+    }
+    
+    .movie-card {
+        max-width: 100%; /* Make movie cards full width on smaller screens */
+        margin: 10px 5px; /* Adjusted margin for smaller screens */
+    }
+ 
+    .search-bar {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+}
+.movie-details {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* Style for details content */
+.details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Show details on movie card hover */
+.movie-card:hover .movie-details {
+    display: flex;
+}
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column; /* Change to a column layout for smaller screens */
+        align-items: center; /* Center align items horizontally */
+    }
+    .movie-card {
+        background-color: #fff; /* Background color for movie cards */
+        border: 1px solid #ddd; /* Border for movie cards */
+        padding: 10px; /* Spacing around the cards */
+        margin-bottom: 20px; /* Spacing between cards */
+        transition: transform 0.2s ease; /* Smooth transition for the tap effect */
+    }
+    
+    /* Apply the hover effect when the card is active (tapped) */
+    .movie-card:active {
+        transform: scale(0.95); /* Slightly reduce the size on tap for feedback */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on tap */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition both properties */
+    }
+
+    .logo {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-bottom: 10px; /* Add space between logo and search bar */
+    }
+
+    #logo-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+        flex-direction: column; /* Stack search input and button vertically */
+        padding: 10px;
+        margin-top: 10px; /* Add some space between the heading and search bar */
+    }
+
+    .search-input {
+        width: 100%; /* Make the search input full width on smaller screens */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add some space between input and button */
+    }
+
+    .search-button {
+        width: 100%; /* Make the search button full width on smaller screens */
+    }
+}
+
